@@ -35,7 +35,7 @@
   the page. Two consecutive runs produce byte-identical output (verified
   by diffing them).
 
-  Usage: `clojure -M:dev:render-html [out-file]`
+  Usage: `kbb -M:dev:render-html [out-file]`
   (default `docs/samples/operator-console.html`)."
   (:require [kotoba.lang.text :as str]
             [jp-go-dds.skin]
@@ -321,7 +321,7 @@
 
      "  <section class=\"card\">\n"
      "    <h2>This run at a glance</h2>\n"
-     "    <p class=\"subtitle\">Build-time generated from the real actor stack by <code>quarryops.render-html</code> (<code>clojure -M:dev:render-html</code>). Every id, number, disposition and violation string below is output of <code>quarryops.advisor</code> &rarr; <code>quarryops.governor</code> &rarr; <code>quarryops.phase</code> &rarr; <code>quarryops.store</code>, executed through the <code>langgraph</code> StateGraph in <code>quarryops.operation</code>. Nothing here is hand-typed.</p>\n"
+     "    <p class=\"subtitle\">Build-time generated from the real actor stack by <code>quarryops.render-html</code> (<code>kbb -M:dev:render-html</code>). Every id, number, disposition and violation string below is output of <code>quarryops.advisor</code> &rarr; <code>quarryops.governor</code> &rarr; <code>quarryops.phase</code> &rarr; <code>quarryops.store</code>, executed through the <code>langgraph</code> StateGraph in <code>quarryops.operation</code>. Nothing here is hand-typed.</p>\n"
      "    <table>\n"
      "      <thead><tr><th>Measure</th><th>Value</th></tr></thead>\n"
      "      <tbody>\n"
