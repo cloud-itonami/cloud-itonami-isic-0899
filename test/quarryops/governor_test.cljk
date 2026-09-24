@@ -2,7 +2,7 @@
   "Pure unit tests of `quarryops.governor/check` against hand-built
   proposals -- the fast, focused complement to `governor-contract-
   test`'s full-graph integration coverage."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [quarryops.governor :as gov]
             [quarryops.store :as store]))
 
