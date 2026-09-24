@@ -37,7 +37,7 @@
 
   Usage: `kbb -M:dev:render-html [out-file]`
   (default `docs/samples/operator-console.html`)."
-  (:require [kotoba.lang.text :as str]
+  (:require [kotoba.io :as kio] [kotoba.lang.text :as str]
             [jp-go-dds.skin]
             [langgraph.graph :as g]
             [quarryops.advisor :as advisor]
@@ -402,7 +402,7 @@
         html (render db)
         ledger (store/ledger db)
         holds (filter #(= :governor-hold (:t %)) ledger)]
-    (.mkdirs (.getParentFile (java.io.File. ^String out)))
+    (kio/mkdirs (kio/parent-file (kio/file ^String out)))
     (spit out html)
     (println "wrote" out
              (str "(" (count ledger) " ledger facts, "
